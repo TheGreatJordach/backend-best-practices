@@ -4,6 +4,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { configValidationSchema } from "./config-validation.shema";
 import { DataSource } from "typeorm";
 import { CustomFileLogger } from "./database.logger";
+import { User } from "../users/entity/user.entity";
 
 @Module({
   imports: [
@@ -21,8 +22,9 @@ import { CustomFileLogger } from "./database.logger";
         username: configService.getOrThrow("DATASOURCE_USERNAME"),
         password: configService.getOrThrow("DATASOURCE_PASSWORD"),
         database: configService.getOrThrow("DATASOURCE_DATABASE"),
-        synchronize: false,
-        entities: [],
+        synchronize: true,
+        log: ["log", "error", "warn", "info", "debug"],
+        entities: [User],
         logger: new CustomFileLogger("DATASOURCE_LOGS"),
       }),
       dataSourceFactory: async (options) => {
