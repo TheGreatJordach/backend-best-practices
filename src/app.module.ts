@@ -4,12 +4,14 @@ import { ConfigModule } from "@nestjs/config";
 import { UsersModule } from "./users/users.module";
 import { APP_PIPE } from "@nestjs/core";
 import { ValidationError } from "class-validator";
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     DatabaseModule,
     UsersModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [

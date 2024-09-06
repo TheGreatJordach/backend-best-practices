@@ -20,7 +20,7 @@ export class User {
   email: string;
   @Column()
   password: string;
-  @Column({ unique: true })
+  @Column()
   phoneNumber: string;
 
   @Column(() => RegistryDate, { prefix: false })

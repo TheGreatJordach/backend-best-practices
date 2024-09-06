@@ -1,11 +1,36 @@
 ### Send POST request with json body
-POST http://localhost:3000/api/auth
+POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "firstName": "Jordach",
+  "firstName": "ines",
   "lastName": "MAKAYA",
-  "email": "content@email.com",
-  "phoneNumber": "0629955944",
+  "email": "ines7@email.com",
+  "phoneNumber": "0626945954",
   "password": "Typescript@@2025"
+}
+
+
+######### SIGNEUP
+### Send POST request with json body
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "ines",
+  "lastName": "MAKAYA",
+  "email": "ines19@email.com",
+  "phoneNumber": "0626945954",
+  "password": "Typescript@@2025"
+}
+
+######### LOGIN
+### Send POST request with json body
+POST http://localhost:3000/api/auth/
+Content-Type: application/json
+
+{
+
+  "email": "ines7@email.com",
+   "password": "Typescript@@2025"
 }
