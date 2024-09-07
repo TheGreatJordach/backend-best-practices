@@ -17,9 +17,9 @@ POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
 {
-  "firstName": "ines",
-  "lastName": "MAKAYA",
-  "email": "ines19@email.com",
+  "firstName": "Lewis",
+  "lastName": "Batchi",
+  "email": "batchi@email.com",
   "phoneNumber": "0626945954",
   "password": "Typescript@@2025"
 }
@@ -31,6 +31,6 @@ Content-Type: application/json
 
 {
 
-  "email": "ines7@email.com",
-   "password": "Typescript@@2025"
+  "email": "batchi@email.com",
+   "password": "Typescript@@20251"
 }
